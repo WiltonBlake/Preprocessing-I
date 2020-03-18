@@ -54,6 +54,154 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+//	border: 1px solid gray;//
+}
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Lato&display=swap');
+
+// Variables //
+
+@main-font: 'Lato', sans-serif;
+@heading-font: 'Bree Serif', serif;
+@main-color: darkgray;
+ 
+// Mixins //
+
+
+// Body //
+
+
+body{
+	font-family: @main-font;
+	max-width: 80%;
+	margin: 0 auto;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 2rem;
+	padding: 2%;
+	font-family: @heading-font;
+}
+
+h2 {
+	font-size: 1.5rem;
+	padding: 2%;
+	font-family: @heading-font;
+	text-align: center;
+}
+
+strong {
+	font-weight: bold;
+  }
+
+// Nav Settings //
+header {
+	border-bottom: 1px solid black;
+	margin: 20px 0;
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+
+	nav {
+	width:100%;
+	align-items: right;
+	}
+
+	.links {
+	display:flex;
+	justify-content:flex-end;
+	}
+
+	nav a {
+		color: gray;
+		text-decoration:none;
+		letter-spacing:3px;
+		padding: 2%;
+
+		&:hover{
+		color: lightgray;
+		}	
+    }
+  }
+
+  // Top Section //
+
+.topSection {
+	display: flex;
+	flex-wrap: wrap;
+	border-bottom: 1px solid black;
+	margin: 20px 0;
+	padding: 20px 0;
+
+}
+
+
+.contact, .profile, .education {
+	width: 33%;
+	
+	p {
+		padding: 0% 2%;
+	}
+}
+
+.contact, .education {
+	text-align: center;
+}
+
+  // Bottom Section //
+
+.bottomSection {
+	display: flex;
+	flex-wrap: wrap;
+	@media (max-width: 700px) {
+			flex-direction: column;
+			align-items: center;
+	
+			}
+}
+
+.skills {
+	width: 33%;
+	
+	p {
+		padding: 0% 2%;
+		text-align: center;
+	}
+}
+
+.experience {
+	width: 67%;
+	
+	p {
+		padding: 0% 2%;
+		
+	}
+}
+
+.skills, .experienc {
+	text-align: center;
+}
+
+  // Footer //
+
+footer {
+	text-align: center;
+	font-size: .75rem;
+}
+
+@media (max-width: 700px) {
+	.topSection {
+		flex-direction: column;
+		align-items: center;
+
+	.contact, .profile, .education {
+		width: 80%;
+
+	.bottomSection {
+		flex-direction: column;
+    	}
+    }
+  }
 }
 
