@@ -148,6 +148,9 @@ body {
   font-display: swap;
   src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
 }
+.blackText {
+  color: black;
+}
 body {
   font-family: 'Lato', sans-serif;
   max-width: 80%;
@@ -167,6 +170,7 @@ h2 {
 }
 strong {
   font-weight: bold;
+  color: black;
 }
 header {
   border-bottom: 1px solid black;
